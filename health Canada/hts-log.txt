@@ -1,0 +1,14 @@
+HTTrack3.48-22+htsswf+htsjava launched on Thu, 02 Nov 2017 16:30:58 at https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwr2C2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices.html -O1 "C:\Customers\Health Canada\health Canada" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+16:31:17	Error: 	"Bad Request" (400) at link www.googletagmanager.com/gtm.js?id= (from https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices.html)
+16:31:18	Error: 	"Not Found" (404) at link https://www.canada.ca/en/health-canada/services/drugs-health-products/biologics-radio-pharmaceuticals-genetic-therapies.html (from https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices.html)
+16:31:18	Error: 	"Not Found" (404) at link https://www.canada.ca/en/health-canada/services/drugs-health-products/natural-health-products.html (from https://www.canada.ca/en/health-canada/services/drugs-health-products/medical-devices.html)
+
+HTTrack Website Copier/3.48-22 mirror complete in 20 seconds : 53 links scanned, 49 files written (3111862 bytes overall) [810425 bytes received at 40521 bytes/sec], 2977583 bytes transferred using HTTP compression in 48 files, ratio 20%, 10.6 requests per connection
+(3 errors, 0 warnings, 0 messages)
