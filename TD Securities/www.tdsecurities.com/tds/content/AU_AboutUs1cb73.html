@@ -11,8 +11,40 @@
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://pdodev.appiancloud.com/suite/tempo/ui/sail-client/embeddedBootstrap.nocache.js" id="appianEmbedded"></script>
+   <script>
+      function showTask(taskId) {
+        $("#tasks").empty();
+        $('<appian-task />').attr("taskId", taskId).on("submit", handleSubmit).appendTo("#tasks");
+      }
 
+      function handleSubmit() {
+        $("#tasks").empty();
+        showTaskList();
+      }
+
+      function showTaskList() {
+        $.ajax({
+          type: 'GET',
+          url: "https://appian.example.com/suite/plugins/servlet/tasklist",
+          dataType:"json",
+          contentType: 'application/json',
+          xhrFields: {
+            withCredentials: true
+          }
+        })
+        .done(function(data) {
+          $("<h1>").text("Appian Tasks").appendTo("#tasks");
+          $.each(data, function(i, item) {
+            $("<a>").attr("href", "#")
+            .text(item.DisplayName)
+            .click(function() { showTask(item.Id); })
+            .appendTo("#tasks");
+          });
+        });
+      }
+    </script>
 
 <link href='../cms/cda/styles/styles.css' rel="stylesheet" type="text/css" />
 
@@ -48,7 +80,7 @@
 	
 		<title>TD Securities&nbsp;-&nbsp;Client Onboarding - Tasks to be completed </title>
 		</head>
-		<body>
+		  <body onload="showTaskList();">
 	
 
 
@@ -180,7 +212,9 @@
 <div class="leftPortion">
 <img title="Three businesspeople making plans" alt="Three businesspeople making plans" src="http://www.tdsecurities.com/tds/image/misc_24.jpg?language=en_CA"></div>
 <div class="rightPortion"></div>
-<appian-report reportUrlStub="7cVSQg"></appian-report>
+
+
+    <div id="tasks"></div>
 
 <div class="dateHolder" id="clock">
 
