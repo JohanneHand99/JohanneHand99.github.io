@@ -1,0 +1,66 @@
+@CHARSET "ISO-8859-1";
+
+#topNavLinks {
+	overflow: hidden;
+	_height: 1%;
+	color: #dedeb6;
+	text-align: right;
+	float: right;
+	margin-right: 5px;
+}
+
+#topNavLinks a {
+	color: #dedeb6;
+}
+
+#languageLinks {
+	text-align: right;
+	margin-bottom: 5px;
+}
+
+#languageLinks li {
+	display: inline;
+	padding: 0 2px;
+}
+
+#secondaryLinks {
+	float: left;
+	list-style: none;
+	COLOR: #dedeb6;
+	TEXT-DECORATION: none;
+	font-size: 11px;
+	margin: 0;
+
+	
+	padding-top: 3px;
+	[padding-top: 3px;
+	padding-top: 5px;
+	]*padding-top: 5px;
+	
+}
+
+#secondaryLinks li {
+	display: inline;
+	padding: 0 2px;
+}
+
+#searchModule {
+	float: left;
+	color: #dedeb6;
+	font-size: 11px;
+	margin: 0 10px;
+}
+
+.searchButton {
+	float: left;
+	padding-top: 1px;
+	[padding-top: 1px;
+	padding-top: 3px;
+	]*padding-top: 2px;
+	margin-right: 4px;
+	
+}
+
+.searchButton a {
+	color: #fff !important;
+}

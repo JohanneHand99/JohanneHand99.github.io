@@ -1,0 +1,6 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+www.tdsecurities.com	TRUE	/tds/	FALSE	1999999999	JSESSIONID	618111E6F3BBD7D6B5AC554262A55388.soc
+www.tdsecurities.com	TRUE	/tds/	FALSE	1999999999	tdsecurities.com_lang_pref	fr_CA
+www.td.com	TRUE	/	FALSE	1999999999	JSESSIONID	000051yFErQsQYhbFmbquN90AiB:1ad49ka5b
+

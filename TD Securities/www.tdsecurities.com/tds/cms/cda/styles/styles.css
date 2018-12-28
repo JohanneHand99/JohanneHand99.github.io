@@ -1,0 +1,2624 @@
+
+/* Generic classes */
+html
+{
+overflow-x: auto;
+overflow-y: scroll;
+filter: expression(document.execCommand("BackgroundImageCache", false, true)); /* I'm adding this line after learning from a colleague that this line fixes the flickering images problem in IE. I don't know if we ever run into this issue on our page, but just to be on the safe side... */
+}
+/*The following style is for mozilla browsers. It gets rid of the outline you get after clicking on a link. */
+:-moz-any-link:focus {
+  outline: none;
+}
+/*I'm overriding from here till the beginning of "LIST STYLES" portion */
+body {
+background: #fff;
+padding: 0;
+margin: 0;
+border: 0;
+width: 100%;
+text-align: center;
+/* I'm putting this stlye in comments for now. overflow:hidden;*/
+}
+body, input, select, textarea, table, td, div {
+color: #333;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size: 11px; /* will go with liquid fonts*/
+}
+/*/* /a{}
+body,
+body td,
+body th,
+body textarea,
+body table
+body ul
+{
+  font-size: x-small;
+  voice-family: "\"}\"";
+  voice-family: inherit;
+  font-size: small;
+}
+html>body,
+html>body td,
+html>body th,
+html>body table,
+html>ul
+{
+  font-size: small;
+}  
+/* *//*
+body p,
+body li,
+body input,
+body select,
+body textarea
+{
+  font-size: 85%;
+}
+html>body p,
+html>body li,
+html>body input,
+html>body select,
+html>body textarea,
+{
+  font-size: 85%;
+}  */
+a {
+color: #0086AC;
+text-decoration: none;
+}
+a:hover {
+/* TBD - I'll add it once it's decided */
+}
+a.black{
+color:#000;
+}
+fieldset {
+margin:0;
+border:0;
+padding:0;
+}
+form, h1, h2, h3, h4, h5, h6, ul, ol {
+margin: 0;
+padding: 0;
+clear: both;
+}
+p{
+margin: 0px;
+}
+img {
+border: 0;
+}
+input, textarea, select, textfield {/*This entire style block will go away with the liquid fonts */
+	color: #333;
+	font-size: 11px;
+}
+.boldText {
+font-weight: bold;
+/*font-size:100%;*/
+}
+p.paddingTop5 {
+padding-top: 5px;
+}
+p.paddingTop15 {
+padding-top: 15px;
+}
+div.paddingTop15{
+padding-top:15px;
+}
+/* End of the overriding */
+/******************************** LIST STYLES **************************************/
+ul li {
+list-style-type: none;
+text-align:left;
+}
+/******************************** Top nav table styles **************************************/
+table.mainContainer {
+width: 100%;
+float: left;
+text-align: left;
+}
+table.topNav {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/topNav_background.jpg) repeat-x 0px 0px;
+float: left;
+width: 100%;
+}
+td.logoContainer {
+float: left;
+width:174px;
+text-align: left;
+margin: 0px;
+padding: 0px;
+
+}
+td.logoContainer img{
+float: left;
+text-align: left;
+margin-left: 15px;
+margin-right: 0px;
+
+}
+table.linkContainer {
+float:right;
+}
+/* I'm adding the following style in comments because it's related to the liquid fonts. To enable these styles, we'll just remove the comments around them. */
+table.linkContainer td, table.searchContainer td {
+font-size:11px;
+/*font-size:85%;*/
+}
+/*End of the liquid font style*/
+td.linkContainer {
+width: 100%;
+padding: 0px 2%;
+padding-right: 1.1%;
+}
+table.linkContainer a{
+color: #DEDEB6;
+text-decoration: none;
+}
+table.countryLinkContainer {
+	
+}
+table.countryLinkContainer td {
+	FONT-SIZE: 11px
+}
+table.countryLinkContainer a {
+	COLOR: #dedeb6; TEXT-DECORATION: none
+}
+td.divider {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/vertDivider_white.gif) no-repeat center;
+width: 13px;
+}
+td.searchContainer {
+width:204px;
+}
+table.searchContainer td{
+color: #DEDEB6;
+}
+table.searchContainer td.first{
+padding-right: 2px;
+}
+table.searchContainer input{
+padding-right: 8px;
+padding-left: 8px;
+padding-top: 2px;
+/*font-size:100%; This style is for liquid fonts, therefore it's commented at the moment. */
+}
+table.searchContainer input.searchBox{
+padding-left: 0px;
+
+padding-left: 0px;
+padding-right: 0px;
+
+}
+select.loginSelect {
+width: 120px;
+}
+
+/******************************** topNav 1st Level Styles **************************************/
+tr.level1Nav {
+height:26px;
+vertical-align:top;
+}
+tr.level1Nav td {
+padding: 0px 1px;
+_padding: 0px 0px;
+}
+tr.level1Nav div.level1Item {
+margin: 0px 1px;
+margin-bottom: 0px;
+float: left;
+height: 29px;
+}
+tr.level1Nav div.level1Item .leftEnd {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/topNav_level1_left.jpg) no-repeat left;
+height: 27px;
+float: left;
+width: 12px;
+}
+tr.level1Nav div.level1Item .middle {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/topNav_level1_middle.jpg) repeat-x left;
+height: 27px;
+padding: 0px 2px;
+float: left;
+color: #fff;
+font-weight: bold;
+}
+tr.level1Nav div.level1Item .middle p{
+margin-top: 7px;
+}
+tr.level1Nav div.level1Item .rightEnd {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/topNav_level1_right.jpg) no-repeat left;
+height: 27px;
+float: left;
+width: 12px;
+}
+tr.level1Nav div.level1Item a.topNavLink {
+color: #fff;
+font-weight: bold;
+text-decoration: none;
+}
+tr.level1Nav div.selected .leftEnd {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/topNav_level1_left_selected.gif) no-repeat top;
+height: 29px;
+float: left;
+width: 12px;
+}
+tr.level1Nav div.selected .middle {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/topNav_level1_middle_selected.gif) repeat-x left;
+height: 29px;
+padding: 0px 2px;
+float: left;
+}
+tr.level1Nav div.selected .rightEnd {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/topNav_level1_right_selected.gif) no-repeat left;
+height: 29px;
+float: left;
+width: 12px;
+}
+tr.level1Nav div.selected a.topNavLink {
+color: #233F36;
+font-weight: bold;
+text-decoration: none;
+}
+/******************************** topNav 2nd Level Styles **************************************/
+tr.level2Nav {
+height:50px;
+vertical-align: top;
+}
+tr.level2Nav td {
+vertical-align: middle;
+background-color: #fff;
+}
+tr.level2Nav div.level2Wrapper {
+margin-top: 2px;
+_margin-top: 4px;
+padding: 0px 6px;
+}
+tr.level2Nav div.level2ItemOff {
+float: left;
+text-align: center;
+line-height: 110%;
+height: 25px;
+_height: 15px; /* hack added to fix an alignment issue in Firefox 2.0*/
+float: left;
+margin: 3px 0px;
+margin-top: 5px;
+border-right: 1px solid #233F36;
+padding: 0px 10px;
+}
+tr.level2Nav div.level2ItemOn {
+text-align: center;
+height: 25px;
+_height: 15px; /* hack added to fix an alignment issue in Firefox 2.0*/
+float: left;
+margin: 3px 0px;
+margin-top: 5px;
+border-right: 1px solid #233F36;
+padding: 0px 10px;
+}
+tr.level2Nav div.oneLine {
+margin: -6px 0 6px;
+padding: 6px 10px;
+height: 13px; /* Had to add this line to fix an alignment issue in Firefox 2.0*/
+_height: 14px;
+} 
+tr.level2Nav div.last {
+border-right: none;
+} 
+/* The following style is for liquid font sizes, therefore it's commented at the moment.
+tr.level2Nav div{
+font-size:91%;
+}*/
+tr.level2Nav a{
+color: #233F36;
+text-decoration: none;
+white-space: nowrap;
+}
+tr.level2Nav div.level2ItemOn a{
+color: #8BB093;
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/topNav_level2_arrow.gif) no-repeat 0px 3px;
+padding-left: 10px;
+font-weight: bold;
+}
+td.whiteSpace {
+vertical-align: top;
+background-color: #fff;
+}
+td div.whiteSpace25px {
+height:20px;
+}
+/******************************** leftNav Styles **************************************/
+td.leftNavContainer {
+width: 191px;
+vertical-align: top;
+*overflow: hidden;
+_overflow: hidden;
+width:190px;
+float:none;
+z-index:1;
+border-right:1px solid #aecab4;
+padding-bottom:20px;
+}
+td.leftNavContainer div.borderFixer {
+position:relative;
+height:4px;
+width:1px;
+background-color:white;
+left:190px;
+top:0px;
+z-index:3;
+overflow:hidden;
+}
+td.leftNavContainer div.top {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/leftNav_top.gif) no-repeat 0px 0px;
+height: 5px;
+overflow:hidden;
+float: left; 
+margin-top:-4px;
+width:190px;
+}
+td.leftNavContainer div.elementsContainer {
+float:left;
+}
+td.leftNavContainer ul{
+border-bottom: solid 1px #AECAB4; 
+width:190px; 
+float: left;
+}
+td.leftNavContainer li.mainLevel {
+font-weight: bold;
+padding: 5px 14px;
+padding-top: 3px;
+padding-right: 10px;
+width:165px;
+float: left;
+}
+td.leftNavContainer li.mainLevel a{
+color: #233F36;
+}
+td.leftNavContainer li.subLevel, td.leftNavContainer li.subLevelOn {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/leftNav_arrow_dark.gif) no-repeat 0px 3px;
+margin: 0px 15px;
+_margin: 0px 8px;
+margin-right: 2px;
+padding: 0px 14px;
+padding-bottom: 5px;
+padding-right: 0px;
+width:153px; 
+float: left;
+}
+td.leftNavContainer li.subLevel a{
+color: #233F36;
+}
+td.leftNavContainer li.subLevelOn {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/leftNav_arrow_down.gif) no-repeat 0px 4px;
+margin-left: 13px;
+_margin-left: 7px;
+padding-left: 16px;
+
+}
+td.leftNavContainer li.subLevelOn a{
+color: #233F36;
+}
+td.leftNavContainer li.subLevel2Off, td.leftNavContainer li.subLevel2On  {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/leftNav_arrow_5thlevel.gif) no-repeat 0px 4px;
+margin: 0px 30px;
+_margin: 0px 16px;
+margin-right: 5px;
+padding: 0px 11px;
+padding-bottom: 5px;
+padding-right: 0px;
+width: 135px; 
+float: left;
+}
+td.leftNavContainer li.subLevel2On {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/leftNav_arrow_selected2.gif) no-repeat 0px 3px;
+color: #8BB093;
+font-weight: bold;
+}
+td.leftNavContainer li.subLevel2On a{
+color: #8BB093;
+}
+td.leftNavContainer li.subLevel2Off a{
+color: #233F36;
+}
+td.leftNavContainer li.selected {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/leftNav_arrow_selected.gif) no-repeat 0px 3px;
+color: #8BB093;
+font-weight: bold;
+}
+td.leftNavContainer li.selected a{
+color: #8BB093;
+}
+td.leftNavContainer div.bottom {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/leftNav_bottom.gif) no-repeat 0px 0px;
+height: 5px;
+overflow:hidden;
+float: left; 
+width: 190px;
+margin-top: -3px;
+}
+td.leftNavContainer div.gradient {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/leftNav_gradient.gif) no-repeat 0px 0px;
+height: 164px;
+overflow:hidden;
+float: left;
+width: 190px;
+border:none;
+}
+td.leftNavContainer ul.last {
+border-bottom: none;
+}
+td.leftNavContainer li.last {
+padding-bottom: 8px;
+}
+
+/********************************* Modified style names (Left Navigation) **************/
+
+td.leftNavContainer li.subLevel0Off, td.leftNavContainer li.subLevel0On {
+font-weight: bold;
+padding: 5px 16px;
+padding-top: 3px;
+padding-right: 10px;
+padding-bottom: 5px;
+width:164px; 
+float: left;
+}
+
+td.leftNavContainer li.subLevel1Off, td.leftNavContainer li.subLevel1On {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/leftNav_arrow_dark.gif) no-repeat 2px 3px;
+margin: 0px 15px;
+_margin: 0px 8px;
+margin-right: 2px;
+padding: 0px 14px;
+padding-bottom: 5px;
+padding-right: 0px;
+width:154px; 
+float: left;
+
+}
+
+td.leftNavContainer li.subLevel1On {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/leftNav_arrow_selected.gif) no-repeat 2px 3px;
+color: #8BB093;
+font-weight: bold;
+}
+
+td.leftNavContainer li.subLevel2Off, td.leftNavContainer li.subLevel2On  {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/leftNav_arrow_5thlevel.gif) no-repeat 0px 4px;
+margin: 0px 30px;
+_margin: 0px 16px;
+margin-right: 5px;
+padding: 0px 11px;
+padding-bottom: 5px;
+padding-right: 0px;
+width: 135px; 
+float: left;
+
+}
+td.leftNavContainer li.subLevel2On {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/leftNav_arrow_selected2.gif) no-repeat 0px 3px;
+color: #8BB093;
+font-weight: bold;
+}
+
+
+td.leftNavContainer a.black { color:black; }
+td.leftNavContainer a.green { color:#8BB093; }
+
+td.leftNavContainer li.subLevel0Off a, td.leftNavContainer li.subLevel1Off a, td.leftNavContainer li.subLevel2Off a{
+color: #233F36;
+}
+
+
+/******************************** rightNav styles **************************************/
+td.rightNavContainer {
+width: 215px;
+vertical-align: top;
+text-align: left;
+padding-bottom:20px;
+}
+td.rightNavContainer a:hover{
+text-decoration: underline;
+}
+td.rightNavContainer div.dateHolder, td.rightNavContainer div.dateHolderHome{
+color: #2D5C3C;
+font-weight: bold;
+padding-left: 9px;
+padding-bottom: 5px;
+padding-top: 4px;
+/*font-size:84%; This style is related to liquid fonts and therefore it's commented at the moment.*/
+width:206px; /* I've added this style to make sure that the right nav will look fine in 800x600 even if we only have the dateholders on the right nav */
+}
+td.rightNavContainer div.dateHolderHome{
+padding-bottom:8px;
+padding-top:8px;
+}
+td.rightNavContainer div.loginBoxContainer {
+float: left;
+clear: both;
+width: 215px;
+border: 1px solid #C8DDCA;
+border-left: none;
+border-right: none;
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/login_background.gif) 0px 0px no-repeat;
+height: 81px;
+margin: 7px 0px;
+margin-top: 2px;
+}
+
+td.rightNavContainer div.loginBoxContainer img.loginImage{
+	padding-top: 4px;
+	padding-left: 6px;
+	padding-bottom: 0px;
+}
+
+td.rightNavContainer div.loginBoxContainer div.title {
+height: 25px;
+}
+td.rightNavContainer div.loginBoxContainer div.dropdownHolder {
+padding: 4px 7px;
+}
+td.rightNavContainer div.loginBoxContainer div.dropdownHolder select{
+width: 201px;
+}
+td.rightNavContainer div.loginBoxContainer div.inputBoxHolder {
+padding-top: 14px;
+margin-left: 13px;
+}
+td.rightNavContainer div.loginBoxContainer div.inputBoxHolder input {
+width: 127px;
+float: left;
+}
+td.rightNavContainer div.loginBoxContainer div.buttonHolder {
+float: right;
+*padding-right: 5px;
+padding-top: 2px;
+}
+td.rightNavContainer div.loginBoxContainer div.buttonHolder a:hover{
+text-decoration: none;
+}
+td.rightNavContainer div.rightNavList {
+padding-left: 9px;
+padding-top: 5px;
+clear: both;
+width:206px; /* I'm adding this style to make sure that the right nav will look fine in 800x600 even if we only have one rightNavList without any other right nav elements. */
+}
+td.rightNavContainer ul li {
+margin: 1px 0px;
+color: #333;
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/bullet_blue.gif) 0px 7px no-repeat;
+padding: 2px 0px;
+padding-left: 9px;
+line-height: 14px;
+}
+td.rightNavContainer #login ul li a:hover{
+text-decoration: none;
+}
+td.rightNavContainer div.rightNavList ul.bullettedList {
+padding-left: 2px;
+}
+td.rightNavContainer #relatedLinks {
+padding-top: 3px;
+}
+h6 {
+line-height: 14px;
+color: #024E7B;
+font-weight: bold;
+font-size: 11px;
+/*font-size: 84%; This style is related to liquid font sizes and therefore it's commented at the moment.*/
+}
+h6.black {
+color: #333;
+}
+td.rightNavContainer div.blueDivider {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/blue_dot.gif) repeat-x 0px 0px;
+float: left;
+width: 100%;
+clear: both;
+height: 3px;
+margin-top: 3px;
+}
+td.rightNavContainer #feedsIndices {
+padding-top: 5px;
+_padding-top: 0px;
+_margin-top: -7px;
+}
+td.rightNavContainer div.gradient {
+float: left;
+border: 1px solid #C8DDCA;
+height: 170px;
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/rightNav_gradient.gif) 0px 0px no-repeat;
+width: 170px;
+margin: 0px 16px;
+_margin: 0px 8px;
+margin-right: 0px;
+margin-top: 36px;
+margin-bottom: 20px;
+}
+td.rightNavContainer div.detailsWrapper {
+float: left;
+padding: 0px 8px;
+padding-top: 7px;
+_padding-top: 0px;
+_margin-top: -5px;
+width:199px; /* I'm adding this style to make sure that the right nav will look fine, even if we only have the detailswrapper class in 800x600. */
+}
+td.rightNavContainer div.detailsWrapper ul li.subHeader {
+background: none;
+font-size: 11px; /*When we switch to the liquid fonts, this style will be removed.*/
+padding:0px;
+}
+td.rightNavContainer div.detailsWrapper ul li.info {
+background: none;
+font-size: 10px;
+/*font-size:74%; This style is for liquid fonts and therefore it's commented at the moment.*/
+padding-bottom: 5px;
+margin-top: -8px;
+padding-left: 0px;
+}
+td.rightNavContainer div.rotatingTombstone img, td.rightNavContainer div.coverImage img {
+float:left;
+padding: 0px 0px;
+border: 1px solid #C8DDCA;
+}
+td.rightNavContainer div.rotatingTombstone img{
+border:none;
+}
+td.rightNavContainer div.coverImage, td.rightNavContainer div.rotatingTombstone {
+margin-top: 10px;
+float:left;
+width:215px;
+overflow:hidden;
+/*background-image: url(../image/tombstone_empty.gif); */
+}
+td.rightNavContainer div.loginContainer ul li.selected{
+background-color: #CDDCE5;
+}
+td.rightNavContainer div.loginContainer h4 {
+color: #fff;
+background-color: #024E7B;
+padding: 2px 5px;
+padding-left: 9px;
+line-height: 15px;
+}
+td.rightNavContainer div.applyNowContainer {
+height: 109px;
+margin: 10px 0px;
+margin-bottom: 8px;
+}
+td.rightNavContainer div.applyNowContainer div.title, td.rightNavContainer div.applyNowContainer div.description{
+padding-left: 10px;
+width: 130px;
+}
+td.rightNavContainer div.applyNowContainer div.title{
+color: #44604D;
+font-size: 16px;
+font-weight: 600;
+padding-bottom: 5px;
+padding-left: 10px;
+padding-top: 15px;
+}
+td.rightNavContainer div.applyNowContainer div.title a{
+color: #44604D;
+text-decoration: none;
+}
+td.rightNavContainer div.applyNowContainer div.description{
+line-height: 14px;
+font-size:11px; /* This style was missing in the version 1.35 file, I'm adding it. */
+}
+td.rightNavContainer div.locatorContainer{
+padding: 5px 10px;
+width:95%; /* This style was missing in the version 1.35 file, I'm adding it. */
+padding-right:0;
+}
+td.rightNavContainer div.locatorContainer p{
+padding: 5px 0px;
+}
+td.rightNavContainer div.locatorContainer select{
+width: 151px;
+vertical-align: top;
+margin-top: 4px;
+}
+td.rightNavContainer div.locatorContainer input {
+padding-left: 2px;
+padding-right: 0px;
+margin-top: 2px;
+}
+td.rightNavContainer img {
+padding: 14px 0px;
+}
+td.rightNavContainer div.contactsContainer{
+padding-top: 2px; /* Added this style to have more space at the top of this element. */
+width:215px; /*I'm adding this style to guarantee that the right nav will look fine even if we only had this element present in the right nav. */
+}
+td.rightNavContainer div.contactsContainer h4{
+background-color:#024E7B;
+line-height:14px;
+color:#fff;
+padding:4px;
+padding-left:9px; /*I've added this style to line up the h4 with the other right nav elements' text. */
+font-size:12px;
+}
+td.rightNavContainer div.contactsContainer h4 img{
+padding-top:0px;
+padding-bottom:0px;
+padding-left: 0px;
+padding-right: 0px;
+}
+
+td.rightNavContainer div.contactsContainer div.contactWrapper, td.rightNavContainer div.contactsContainer div.contactWrapperUndashed{
+padding-top:5px;
+padding-left:9px; /* I've changed this value from 5px to 9px. */
+padding-bottom:3px;
+border-bottom:1px dashed #8CBED5;
+}
+td.rightNavContainer div.contactsContainer div.contactWrapper div.city, td.rightNavContainer div.contactsContainer div.contactWrapperUndashed div.city{
+line-height:14px;
+font-size:11px;
+/*font-size:91.7%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+color:#024E7B;
+font-weight:bold;
+padding-bottom:5px;
+}
+td.rightNavContainer div.contactsContainer div.contactWrapper div.contactName, td.rightNavContainer div.contactsContainer div.contactWrapperUndashed div.contactName{
+font-weight:bold;
+font-size:10px;
+line-height:14px;
+/*font-size:83%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+clear:both;
+}
+td.rightNavContainer div.contactsContainer div.contactWrapper div.contactTitle, td.rightNavContainer div.contactsContainer div.contactWrapper div.contactNumber{
+font-size:10px;
+line-height:14px;
+/*font-size:83%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+} 
+td.rightNavContainer div.contactsContainer div.contactWrapper div.contactTitle{
+font-size:10px;
+line-height:14px;
+}
+td.rightNavContainer div.contactsContainer div.contactWrapper div.contactNumber{
+padding-bottom:5px;
+padding-top:2px;
+}
+td.rightNavContainer div.contactsContainer div.contactWrapper div.contactNumber img{
+padding:0;
+padding-left:10px;
+vertical-align:text-bottom;
+}
+td.rightNavContainer div.contactsContainer div.contactWrapper div.contactNumber img.left{
+padding-left:0px;
+}
+td.rightNavContainer div.contactsContainer div.hidden{
+display:none;
+}
+td.rightNavContainer div.contactsContainer div.linkContainer{
+padding:5px;
+padding-bottom:3px;
+background:url(http://www.tdsecurities.com/tds/cms/cda/images/bullet_blue.gif) no-repeat 5px 9px;
+padding-left:15px;
+font-weight:bold;
+cursor:pointer;
+}
+/*I'm removing a block of contactsContainer styles from here because they are being repeated (for reference see lines 715 through 764 in version 1.35). We don't need to have them duplicated. */
+/*These styles were located at the top. I'm moving them here since they belong to the right nav styles section. */
+td.rightNavContainer div.contactsContainer div.contactWrapperUndashed{
+border-bottom:none;
+}
+td.rightNavContainer div.contactsContainer div.contactWrapperUndashed div.contactTitle, td.rightNavContainer div.contactsContainer div.contactWrapperUndashed div.contactNumber{
+font-size:10px;
+line-height:14px;
+/*font-size:83%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+} 
+td.rightNavContainer div.contactsContainer div.contactWrapperUndashed div.contactTitle{
+}
+td.rightNavContainer div.contactsContainer div.contactWrapperUndashed div.contactNumber{
+padding-bottom:5px;
+}
+td.rightNavContainer div.contactsContainer div.contactWrapperUndashed div.contactNumber img{
+padding:0;
+padding-left:10px;
+vertical-align:text-bottom;
+}
+/*End of the move*/
+/******************************** Footer styles **************************************/
+td.footerContainer {
+background-color: #EBF3EB;
+text-align: right;
+width: 98%;
+border-top: 2px solid #D7D4CC;
+}
+td.footerContainer div.tdSelectionContainer form {
+float:left;
+}
+
+td.footerContainer div.tdSelectionContainer {
+float: left;
+margin-left: 2px;
+height: 30px;
+clear: none;
+margin-top: 5px;
+width:310px;
+}
+td.selectBoxContainer{
+padding-bottom: 7px;
+padding-left: 3px;
+
+}
+td.fotterGoButton{
+padding-top: 3px; 
+}
+td.footerContainer div.tdSelectionContainer select{
+vertical-align: top;
+width: 218px;
+margin-top: 8px;
+}
+td.footerContainer div.tdSelectionContainer .goButton{
+margin-top: 6px;
+}
+td.footerContainer div.tdSelectionContainer input{
+vertical-align: top;
+margin-top: 6px;
+}
+td.footerContainer div.footer {
+padding: 6px 12px;
+padding-right: 8px;
+float: left;
+font-size: 10px;
+/*font-size: 83%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+width:inherit;
+}
+
+td.footerContainer div.linkContainer {
+/*height:40px; This style is commented so that height is not fixed and can vary as per number of footer links */
+float: right;
+width: 65%; /*I'm changing this value to 70% from 60% , because multilangual link labels can be lengthy. */
+}
+td.footerContainer div.footer a.footerLinkDark {
+color: #2F5F3E;
+text-decoration: none;
+float: right;
+padding: 4px 0px;
+white-space: nowrap;
+}
+td.footerContainer div.footer span.footerDivider {
+color: #2F5F3E;
+float: right;
+padding: 4px 7px;
+}
+td.footerContainer div.footer a.footerLinkLight {
+color: #8BB093;
+text-decoration: none;
+padding: 4px 0px;
+float:right;
+}
+td.footerContainer div.footer span.footerDividerGrey {
+color: #999;
+padding: 4px 7px;
+float:right;
+}
+td.footerContainer div.footer span.greyText {
+color: #999;
+padding: 4px 0px;
+float:right;
+clear: both;
+}
+/******************************** contentContainer styles **************************************/
+/** AAKASH - Added for handling HTML tags in XML **/
+td.contentContainer div.contentSection ol
+{
+    
+	margin:-5px 0px 10px 39px;
+	_margin:-5px 0px 8px 42px;
+	clear: none;    
+}
+td.contentContainer div.contentSection ol.alpha li{
+list-style:lower-alpha !important;
+}
+/* I'm changing the following style based on a request from the designer. The bullets have to be squares & they have to be indented by 5 pixels. I'm leaving the old values in comments for reference. */
+td.contentContainer div.contentSection ul
+{
+    margin:-5px 0px 10px 20px;
+	_margin:-5px 0px 8px 20px;
+	clear:none;
+	/*clear: none;
+    margin-left: 18px;
+    margin-right: 10px;
+    list-style-type: square;
+    text-align:left;
+    margin-bottom: 10px;*/
+}
+
+td.contentContainer div.contentSection ol li
+{
+	list-style-type: decimal;
+	padding:2px 0px;
+	text-align:left !important;
+}
+
+/* I'm changing the following style based on a request from the designer. The bullets have to be squares & they have to be indented by 5 pixels. I'm leaving the old values in comments for reference. */
+td.contentContainer div.contentSection ul li
+{
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/bullet_square.gif) 0px 8px no-repeat;
+	padding:2px 10px;
+	background-position:0px 6px; /* Recently added based on the designer's preference. */
+	_background-position:0px 7px; /* Recently added based on the designer's preference. */
+	/*list-style-type: disc;
+	line-height:18px;*/
+}
+/* The following styles were created on 07/10 to accomodate 2nd & 3rd level ul li styles */
+td.contentContainer div.contentSection ul li.noBackground
+{
+	background:none;
+}
+/* The following styles were created on 07/10 to accomodate 2nd & 3rd level ul li styles */
+td.contentContainer div.contentSection ul li ul, td.contentContainer div.contentSection ul ul
+{
+margin-top:2px;
+margin-left:10px;
+_margin-left:1px;
+margin-bottom:1px;
+}
+/* The following styles were created on 07/10 to accomodate 2nd & 3rd level ul li styles */
+td.contentContainer div.contentSection ul li ul li, td.contentContainer div.contentSection ul ul li
+{
+background:url(http://www.tdsecurities.com/tds/cms/cda/images/bullet_square_light.gif) 0px 7px no-repeat;
+/*margin-left:20px; Changes done for making 2nd */
+}
+/* The following styles were created on 07/10 to accomodate 2nd & 3rd level ul li styles */
+td.contentContainer div.contentSection ul li ul li ul
+{
+margin-top:2px;
+margin-left:0px;
+margin-bottom:1px;
+}
+/* The following styles were created on 07/10 to accomodate 2nd & 3rd level ul li styles */
+td.contentContainer div.contentSection ul li ul li ul li
+{
+background:url(http://www.tdsecurities.com/tds/cms/cda/images/bullet_hyphen.gif) 0px 7px no-repeat;
+font-size:10px;
+padding-left:7px;
+}
+td.contentContainer div.contentSection ul.bullettedList {
+margin-left:0px;
+_margin-left:0px;
+clear:none;
+/* margin-top: -5px; I'm removing the negative margin based on a request from the designer. */
+}
+
+td.contentContainer  div.contentSection ul.bullettedList li {
+margin: 9px 0px;
+color: #333;
+margin-bottom: 8px;
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/bullet_blue.gif) 0px 4px no-repeat;
+*background-position: 0px 5px;
+padding-left: 7px;
+line-height: 14px;
+list-style-type: none;
+padding-top:0px;
+padding-bottom:0px;
+position: relative;
+}
+td.contentContainer  div.contentSection ul.bullettedList li ol li{
+background:none;
+list-style-type:decimal;
+}
+td.contentContainer div.contentSection ul.bullettedList li.liText {
+background: none;
+padding-left: 7px;
+color: #333;
+margin-top: -6px;
+list-style-type: none;
+}
+td.contentContainer div.contentSection ul.bullettedList li.liText p{
+margin-bottom:0;
+padding: 1px 0 5px 0;
+}
+ul.bullettedList li a{
+text-decoration: none;
+color: #0086AC;
+}
+/*for making normal text as Link artf521708 */
+td.contentContainer div.contentSection ul.bullettedList li.normaltext{
+text-decoration: underline;
+color: #0086AC;
+}
+
+td.contentContainer div.contentSection ul.noBullets
+{
+margin-left: 0px;
+padding-left:0px;
+clear: none;
+float: left;
+margin-bottom: 0px;
+_margin-bottom: 20px;
+}
+td.contentContainer div.contentSection ul.noBullets li
+{
+margin-top: 0px;
+margin-bottom: 2px;
+list-style-type: none;
+padding: 0px 10px 0px 0px;
+font-weight: normal;
+line-height: 20px;
+background-image:none;
+
+}
+/* Add for IInd Level's Bullet - Listing*/
+td.contentContainer div.contentSection ul.noBullets li ul
+{
+margin-top: 0px;
+margin-bottom: 2px;
+list-style-type: none;
+padding-left: 10px;
+font-weight: normal;
+line-height: 20px;
+}
+td.contentContainer div.contentSection ul.noBullets li ul li
+{
+margin-top: 0px;
+margin-bottom: 2px;
+list-style-type: circle;
+padding-left: 10px;
+font-weight: normal;
+line-height: 20px;
+}
+
+
+
+td.contentContainer div.contentSection ul.noBullets li.liText
+{
+
+list-style-type : none;
+padding-left: 0px;
+font-weight: normal;
+line-height: 20px;
+
+}
+/** --------------------------------------------------------- **/
+
+td.contentContainer {
+padding: 0px 14px;
+/*text-align: left;*/
+width: 70%; /*I'm changing this to 70%, because that's what I have in my styles. */
+vertical-align: top;
+}
+td.contentContainer div.pageCategory {
+border-bottom: solid 1px #AECAB4;
+margin-bottom: 10px;
+width: 100%;
+}
+h1 {
+color: #AECAB4;
+font-weight: bold;
+font-size: 18px;
+/*font-size: 120%; This style is for liquid fonts and therefore it's currently commented out. */
+padding-bottom: 2px;
+}
+h2 {
+color: #2D5C3D;
+font-weight: bold;
+font-size: 18px;
+/*font-size: 135%; This style is for liquid fonts and therefore it's currently commented out. */
+padding-bottom: 7px;
+}
+h3 {
+color: #2D5C3D;
+font-weight: bold;
+font-size: 14px;
+/*font-size: 105%; This style is for liquid fonts and therefore it's currently commented out. */
+padding-bottom: 8px;
+}
+h4 {
+font-size: 14px;
+/*font-size: 105%; This style is for liquid fonts and therefore it's currently commented out. */
+color: #4B6B97;
+font-weight: bold;
+padding-bottom: 10px;
+}
+h5 {
+font-size: 12px;
+/*font-size: 91%; This style is for liquid fonts and therefore it's currently commented out. */
+color: #2D5C3D;
+font-weight: bold;
+clear: both;
+padding-bottom:5px;
+}
+td.contentContainer div.contentSection {
+width: 100%;
+_width: 99%;
+float:left;
+padding-bottom:20px;
+}
+td.contentContainer a:hover{
+text-decoration: underline;
+}
+td.contentContainer img.picRight {
+float: right;
+border: 1px solid #AECAB4;
+margin: 10px 13px;
+margin-right: 3px;
+margin-top: 0px;
+}
+td.contentContainer img.picLeft {
+float: left;
+border: 1px solid #AECAB4;
+margin-right: 15px;
+margin-bottom:5px;
+}
+td.contentContainer img.picLong {
+float: left;
+/*I'm removing this style, since its syntax is incorrect & we don't want to use it any way. We have a different treatment for banners, refer to the html templates. width=100%;*/
+padding-bottom: 16px;
+padding-top: 5px; /*I'm chaning this value to 5 from 0, because that's what I have in my styles. */
+}
+td.contentContainer p {
+line-height:15px; /*I'm changing this value to 15px, because that's what we have in the design documents & the templates I've provided. */
+text-align:left;
+margin-bottom:12px; /* I know that this was added to add space at the end of paragraphs, but I thought we agreed not to have this stlye, instead adding <br /> tags after the paragraphs. Let's talk about this change on Monday. */
+}
+/*td.contentContainer p.decisionpage{
+margin-bottom:0px;
+}*/
+td.contentContainer div.bannerWrapper{
+width:100%;
+margin:0;
+padding:0;
+overflow:hidden;
+margin:5px 0 15px 0;
+border:none;
+height:auto;
+background:url(http://www.tdsecurities.com/tds/cms/cda/images/banner_background.gif) repeat-x 0px bottom;
+position:relative;
+}
+td.contentContainer div.bannerWrapper div.leftPortion{
+float:left;
+}
+td.contentContainer div.bannerWrapper div.leftPortion img{
+vertical-align:bottom;
+}
+td.contentContainer div.bannerWrapper div.rightPortion{
+float:right;
+background:none;
+width:1px;
+border-right:1px solid #C8DDCA;
+height:120px;
+position:absolute;
+right:0px;
+bottom:0px;
+}
+
+/*Cols1 and cols2 are same class*/
+td.contentContainer div.cols2TextOnly, td.contentContainer div.cols1TextOnly
+{
+margin-top: 0px; /* artf522773 For Fixing spacing according to Mockup by Anuj 10-07-2007 */
+clear: both;
+float: left;
+width: 100%;
+margin-bottom:10px;
+}
+td.contentContainer div.cols1TextOnly{
+float:none;
+clear:none;
+width:auto;
+}
+td.contentContainer div.cols2TextOnly ul
+{
+margin:0px;
+padding:0px;
+line-height:15px;
+}
+td.contentContainer div.contentSection div.cols1TextOnly h4{
+padding-bottom:10px;
+}
+
+/* For Fixing tar artf517153 artf506789  
+td.contentContainer div.cols1TextOnly p
+{
+margin-top:20px;
+margin-bottom:0px;
+}
+*/
+/*td.contentContainer div.cols1TextOnly {
+margin-top: 11px;  artf522782, artf522786 For Fixing spacing according to Mockup by Anuj 10-07-2007 
+clear: both;
+float: left;
+width: 100%;
+}*/
+td.contentContainer div.leftElement {
+width: 47.6%;
+padding-right: 1.5%;
+float: left;
+border-right:1px solid #D6E4D9;
+}
+td.contentContainer div.cols2ImageAndText{
+width:100%;
+}
+td.contentContainer div.cols2ImageAndText div.leftElement {
+border-right: solid 1px #fff;
+width:262px; /*couldn't find this style in styles.css from CVS. This style is currently pending clarification from the designer.*/
+}
+td.contentContainer div.cols2ImageAndText img{
+border: 1px solid #AECAB4;
+}
+/* I'm adding the following element which is on my styles but not in version 1.35. */
+td.contentContainer div.cols2ImageAndText div.leftElement p{
+/*font-size:83%;*/
+line-height:13px;
+padding-top:8px;
+_padding-top:5px;
+}
+/* End of the addition. */
+td.contentContainer div.leftElement p {
+line-height: 15px;
+}
+td.contentContainer div.rightElement {
+float: left;
+width: 47.5%;
+padding-left: 1.9%;
+padding-right: 0.9%;
+}
+td.contentContainer div.rightElement p {
+line-height: 15px;
+}
+td.contentContainer div.horzDivider {
+float:left;
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/cols2_border.gif) repeat-x 0px 0px;
+width: 100%;
+margin: 15px 0px 18px 0px;
+_margin-bottom:6px;
+height: 10px;
+}
+td.contentContainer ul.bullettedList li {
+margin: 9px 0px;
+color: #333;
+margin-bottom: 8px;
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/bullet_blue.gif) 0px 10px no-repeat;
+padding-left: 7px;
+line-height: 14px;
+}
+td.contentContainer div.contentSection ul.noBullets li a sup, td.contentContainer div.contentSection p sup{
+font-size:8px;
+_font-size:9px;
+}
+td.contentContainer ul.bullettedList li.liText {
+background: none;
+padding-left: 7px;
+color: #333;
+margin-top: -8px;
+}
+/* To be added with the liquid font-size styles, so currently this style is commented out
+td.contentContainer ul.bullettedList li.liText p{
+font-size:100%;
+}*/
+ul.bullettedList li a{
+text-decoration: none;
+color: #0086AC;
+}
+td.contentContainer ul.noBullets{
+float: left;
+width:100%;
+list-style-type: none;
+padding-top:0px;
+padding-bottom:20px;
+_padding-bottom:0px;
+}
+td.contentContainer ul.noBullets li{
+background: none;
+padding-left: 0px;
+list-style-type: none;
+line-height: 15px;
+width:100%;
+clear:both;
+}
+td.contentContainer ul.noBullets li.liText {
+padding-left: 0px;
+font-weight: normal;
+list-style-type: none;
+}
+td.contentContainer a.backToTop {
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/bullet_blue_top.gif) 0px 6px no-repeat;
+padding: 0px 0px 0px 11px;
+text-decoration: none;
+color: #0086AC;
+/*float: right;*/
+_padding-top:10px;
+_background-position: 0px 16px;
+}
+
+span.rightAligned {
+float: right;
+}
+span.contactLinksPreview img{
+padding-top: 0px;
+}
+
+
+/*For liquid fonts. 
+td.contentContainer div.linkContainer a.rightAligned {
+font-size:85%
+}
+*/
+td.contentContainer div.linkContainer a.more{
+background-image:url(http://www.tdsecurities.com/tds/cms/cda/images/bullet_blue.gif);
+}
+td.contentContainer div.linkContainerRight a.more{
+background-image:url(http://www.tdsecurities.com/tds/cms/cda/images/bullet_blue.gif);
+}
+
+
+td.contentContainer div.itemDesc {
+float:left;
+}
+td.contentContainer div.cols1TextOnly h4{
+padding-bottom:0px;
+}
+td.contentContainer div.itemDesc h5{
+color: #2D5C3D;
+padding-bottom:10px;
+}
+td.contentContainer div.itemDesc ul{
+/*_margin-bottom:5px;*/
+}
+td.contentContainer div.eventWrapper {
+line-height: 15px;
+padding-bottom: 30px;
+}
+/*  To be added with the liquid font-size styles, so currently this style is commented out
+td.contentContainer div.itemDesc a{
+font-size:85%;
+}
+*/
+td.contentContainer div.eventWrapper a{
+color: #0086AC;
+text-decoration: underline;
+}
+td.contentContainer div.eventWrapper div.eventDescription {
+padding: 14px 0px;
+}
+td.contentContainer div.cols2HasImage {
+float: left;
+padding: 13px 0px;
+width: 100%;
+line-height: 15px;
+clear: both;
+padding-bottom: 19px;
+}
+td.contentContainer div.cols2HasImage span img{
+border: 1px solid #333;
+margin-bottom: 10px;
+_margin-bottom: 5px;
+}
+td.contentContainer div.cols2HasImage p{
+float: left;
+padding: 15px 0px;
+clear: right;
+}
+td.contentContainer div.cols2HasImage div.colContainer {
+width: 49.5%;
+float: left;
+padding-right:0;
+padding-top: 2px;
+text-align:center;
+}
+/* This style is related to liquid font sizes and therefore it's commented out at the moment.
+td.contentContainer div.cols2HasImage div.colContainer div{
+font-size:85%;
+}
+*/
+td.contentContainer div.cols2HasImage div.textOnly {
+text-align:left;
+}
+td.contentContainer div.cols2HasImage div.vertical {
+
+}
+td.contentContainer div.cols2HasImage div.priceWrapper {
+padding-bottom: 8px;
+/*font-size:85%; This style is related to liquid font sizes and therefore currently it's commented out. */
+}
+td.contentContainer div.cols2HasImage div.colContainer div.subTitle {
+padding-top: 8px;
+}
+td.contentContainer div.cols3HasImage{
+width: 100%;
+margin: 20px 0px;
+margin-top: 24px;
+float: left;
+}
+td.contentContainer div.cols3HasImage div.colContainer {
+text-align: center;
+width: 33.1%;
+line-height: 15px;
+float: left;
+background:url(http://www.tdsecurities.com/tds/cms/cda/images/vertDivider_green.gif) repeat-y right;
+}
+td.contentContainer div.cols3HasImage div.colContainer a{
+color: #333;
+}
+td.contentContainer div.cols3HasImage div.last{
+border: none;
+padding-right: 0px;
+width: 33%;
+padding-left: 0px;
+background:none;
+}
+td.contentContainer div.cols3HasImage div.colContainer div.imageWrapper {
+height:100px;
+}
+td.contentContainer div.cols3HasImage div.colContainer div.imageWrapper table{
+width:96%;
+}
+td.contentContainer div.cols3HasImage div.colContainer div.imageWrapper table tr td{
+padding:0;
+}
+td.contentContainer div.cols3HasImage div.amountWrapper, td.contentContainer div.cols3HasImage div.subTitle {
+font-weight: bold;
+/*font-size:85%; This style is related to liquid font sizes and therefore currently it's commented out. */
+padding-bottom:10px;
+}
+td.contentContainer div.cols3HasImage div.subTitle {
+height: 30px;
+padding: 3px 10px;
+}
+td.contentContainer div.cols3HasImage div.typeWrapper, td.contentContainer div.cols3HasImage div.dateWrapper, td.contentContainer div.cols3HasImage div.roleWrapper {
+padding: 0px 10px;
+/*font-size:85%; This style is related to liquid font sizes and therefore currently it's commented out.*/
+}
+td.contentContainer div.cols3HasImage div.vertDivider {
+width: 1px;
+border-left: 1px dashed #C8DDCA;
+margin: 0px 2px;
+height: inherit;
+float: left;
+}
+td.contentContainer div.greenBackgroundBox {
+background-color: #E6F0E8;
+padding: 5px 1.5%;
+height: 22px; /* I'm changing this to 22px because that's what I have in the latest styles.css. */
+margin: 15px 0px;
+margin-top: 23px;
+float:left;
+clear:both;
+width:97%;
+}
+td.contentContainer div.greenBackgroundBox div.leftEnd{
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/greenbox_left.gif) no-repeat 0px 0px;
+float: left;
+}
+td.contentContainer div.greenBackgroundBox div.text {
+line-height: 15px;
+float: left;
+padding-right: 0px;
+padding-top: 2px;
+/*font-size:85%; This style is related to liquid font sizes and therefore currently it's commented out.*/
+}
+td.contentContainer div.greenBackgroundBox select {
+margin-top: 2px;
+padding-left: 5px;
+margin-left: 10px;
+float: left;
+}
+td.contentContainer form.longForm div.greenBackgroundBox {
+margin: 0px;
+clear: both;
+}
+td.contentContainer div.greenBackgroundBox select.yesNo {
+width: 50px;
+float: left;
+}
+td.contentContainer div.greenBackgroundBox select.transactionType, td.contentContainer div.greenBackgroundBox select.country {
+width: 200px;
+}
+td.contentContainer div.greenBackgroundBox select.transactionType {
+margin-right: 10px;
+}
+td.contentContainer div.greenBackgroundBox div.goButton, td.contentContainer div.greenBackgroundBox div.submitButton {
+float: left;
+padding: 0px 10px;
+padding-top: 1px;
+}
+td.contentContainer div.greenBackgroundBox div.submitButton {
+_padding: 0px 10px;
+_padding-left: 5px;
+padding: 0px 0px;
+padding-top: 1px;
+
+
+}
+td.contentContainer div.greenBackgroundBox div.submitButton a:hover{
+text-decoration: none;
+}
+td.contentContainer div.greenBackgroundBox div.goButton a:hover{
+text-decoration: none;
+}
+td.contentContainer div.noBackground {
+background-color: #fff;
+padding: 5px 0px;
+height: 19px;
+margin: 10px 0px;
+margin-top: -5px;
+width:100%;
+}
+td.contentContainer div.hasButton {
+padding-top: 5px;
+padding-bottom: 5px;
+_padding-bottom: 0px;
+}
+td.contentContainer div.greenBackgroundBox select.month {
+margin-left: 5px;
+}
+td.contentContainer div.greenBackgroundBox select.year {
+margin-left: 5px;
+margin-right: 5px;
+}
+td.contentContainer div.greenBackgroundBox div.letterContainer {
+float: left;
+font-size: 12px;
+font-weight: bold;
+padding: 3px 4px;
+}
+td.contentContainer div.greenBackgroundBox div.letterContainer a{
+color: #2D5C3D;
+}
+td.contentContainer div.greenBackgroundBox div.letterContainer a.selected {
+text-decoration: underline;
+}
+td.contentContainer div.contactContainer {
+padding-bottom: 5px;
+line-height: 15px;
+}
+td.contentContainer div.contactFlashContainer {
+padding-bottom: 5px;
+line-height: 15px;
+width: 150px;
+margin:10px 0px;
+}
+/* This style is related to liquid fonts and therefore it's commented out at the moment. 
+td.contentContainer div.contactContainer div, td.contentContainer div.contactContainer a.rightAligned{
+font-size:85%;
+}*/
+td.contentContainer div.contactContainer div.title, td.contentContainer div.contactFlashContainer div.title{
+/*font-size:70%;*/
+font-size:9px;
+color:#666;
+line-height:15px;
+padding-top:2px;
+}
+td.contentContainer div.contactContainer div.description, td.contentContainer div.contactFlashContainer div.description {
+padding: 8px 0px;
+}
+td.contentContainer div.messageBox {
+background-color: #E7EFE8;
+padding: 6px 10px;
+width:97%; /* I'm changing this value to 97% for alignment purposes. */
+float:left; /*I'm adding this style. */
+}
+td.contentContainer div.messageBox div.message{
+padding-top: 8px;
+/*font-size:85%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+}
+span.orangeText {
+color: #FF9900;
+}
+td.contentContainer form h5 {
+padding-bottom:10px; /* I've changed these styles based on a request from the designer. */
+padding-top:10px;
+}
+td.contentContainer form.noTitle {
+margin-top: 15px;
+}
+td.contentContainer div.textInputPair, td.contentContainer div.textDropdownPair {
+padding: 2px 0px;
+float: left;
+width:100%; /* I saw that this was changed to 80% but I'm keeping it at 100% for now, let's discuss this change on Monday. */
+}
+td.contentContainer div.textInputPair div.fieldDescription, td.contentContainer div.textCheckBox div.fieldDescription, td.contentContainer div.textDropdownPair div.fieldDescription {
+width: 224px;
+padding-right: 10px;
+padding-top: 2px;
+float: left;
+/*font-size:85%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+}
+td.contentContainer div.textInputPair div.short, td.contentContainer div.textDropdownPair div.short, td.contentContainer div.textCheckBox div.short, td.contentContainer div.textTextAreaPair div.short {
+width: 24%;
+float: left;
+/*font-size:85%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+}
+td.contentContainer div.textTextAreaPair div.short {
+width: 24%;
+float:left;
+}
+td.contentContainer div.textDropdownPair select.salutation{
+float:left;
+width:60px;
+}
+td.contentContainer div.textInputPair input{
+width: 245px;
+float: left;
+}
+td.contentContainer div.textTextAreaPair {
+clear: both;
+padding-top: 5px;
+}
+td.contentContainer div.textTextAreaPair div.fieldDescription {
+padding: 10px 0px;
+padding-top: 0px;
+/*font-size:85%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+}
+td.contentContainer div.textTextAreaPair textArea {
+width: 495px;
+margin-left:0px;
+}
+td.contentContainer div.buttonContainer {
+clear: both;
+/*float: right;*/  /*for fixing the artf522872 */
+padding: 30px 0px; /*for fixing the artf522872 change 20 to 30 */
+padding-right: 23px;
+}
+td.contentContainer div.buttonContainerShort {
+clear: both;
+/*float: right;*/  /*for fixing the artf522872 */
+padding: 20px 0px;
+width:50%;
+}
+td.contentContainer div.buttonContainerShort a:hover{
+text-decoration: none;
+}
+td.contentContainer div.buttonContainerShort input, td.contentContainer div.buttonContainer input{
+padding: 0px 4px;
+float:right;
+}
+td.contentContainer div.checkBoxList {
+padding: 5px 0px;
+clear: both;
+}
+td.contentContainer div.textCheckBox {
+padding: 0px 0px;
+clear: both;
+}
+td.contentContainer div.checkBoxTextPair {
+float: left;
+/*margin: 5px 0px;*/
+margin-left: -4px;
+}
+td.contentContainer div.checkBoxTextPair div.text, td.contentContainer div.checkBoxTextPair input{
+float: left;
+padding-top: 2px;
+_padding-top: 3px;
+}
+td.contentContainer div.checkBoxTextPair div.text {
+padding-left: 5px;
+/*font-size:85%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+}
+td.contentContainer div.textTextAreaPair textarea.textBoxShort {
+float:left;
+width: 245px;
+height: 110px;
+margin-left:10px;
+}
+td.contentContainer div.textRadiosGroup {
+padding: 4px 0px;
+padding-bottom: 2px;
+clear: both;
+float: left;
+width: 100%;
+}
+td.contentContainer div.textRadiosGroup div.radioTextPair, td.contentContainer div.textRadiosGroup div.radioTextPair input, td.contentContainer div.textRadiosGroup div.fieldDescription {
+float: left;
+/*font-size:85%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+}
+td.contentContainer div.textRadiosGroup div.radioTextPair {
+margin-top:-2px;
+}
+td.contentContainer div.textRadiosGroup div.radioTextPair input{
+float: left;
+margin-left: 8px;
+_margin-left: 4px;
+}
+td.contentContainer div.textRadiosGroup div.radioTextPair div.text{
+float: left;
+margin-left: 0px;
+margin-top: 2px;
+}
+td.contentContainer div.radioTextPair div.textBoxWrapper {
+clear:none;
+float: left;
+padding-top: 2px;
+}
+td.contentContainer div.radioTextPair div.textBoxWrapper input{
+width: 245px;
+}
+td.contentContainer div.horizontalDivider{
+float:left;
+width: 100%;
+height: 12px;
+border-bottom: 1px solid #D6E4D9;
+margin-bottom: 6px;
+_margin-bottom: 8px;
+}
+td.contentContainer div.oneLineText{
+float:left;
+clear: both;
+padding-top: 10px;
+width: 100%;
+/*font-size:85%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+}
+td.contentContainer div.oneLineCheckBoxText, td.contentContainer div.oneLineRadiosText, td.contentContainer div.oneLineRadioText{
+float:left;
+clear: both;
+width: 100%;
+padding: 5px 4px;
+_padding: 5px 8px;
+}
+td.contentContainer div.oneLineRadiosText, td.contentContainer div.oneLineRadioText{
+padding: 5px 0px;
+_padding: 5px 0px;
+}
+td.contentContainer div.oneLineCheckBoxText div.text{
+padding-left: 0px;
+padding-right: 20px;
+}
+td.contentContainer div.oneLineRadiosText div.radioTextPair, td.contentContainer div.oneLineRadiosText div.radioTextPair input, td.contentContainer div.oneLineRadioText div.radioTextPair, td.contentContainer div.oneLineRadioText div.radioTextPair input{
+float: left;
+}
+td.contentContainer div.oneLineRadioText div.radioTextPair, td.contentContainer div.oneLineRadioText div.radioTextPair input{
+float: left;
+}
+td.contentContainer div.oneLineRadiosText div.radioTextPair div.text, td.contentContainer div.oneLineRadioText div.radioTextPair div.text{
+float: left;
+padding-top: 2px;
+_padding-top: 3px;
+padding-left: 0px;
+padding-right: 20px;
+/*font-size:85%; This style is related to liquid fonts and therefore it's commented out at the moment. */
+}
+td.contentContainer div.oneLineRadioText div.radioTextPair {
+margin: 1px 0px;
+}
+td.contentContainer div.textInputPair a {
+padding-left: 10px;
+}
+td.contentContainer div.iconTextPair {
+width: 100%;
+float: left;
+clear: both;
+padding: 2px 5px;
+padding-bottom: 9px;
+}
+td.contentContainer div.iconTextPair img {
+padding-right: 10px;
+margin-top: 2px;
+float: left;
+}
+td.contentContainer div.iconTextPair span.description {
+width: 330px;
+float: left;
+}
+td.contentContainer div.contactAgendaContainer{
+float:left;
+padding-right:10px;
+padding-top:10px;
+width: 192px;
+}
+td.contentContainer div.contactAgendaFlashContainer{
+float:left;
+padding-right:10px;
+padding-top:10px;
+width: 455px;
+}
+td.contentContainer div.contactAgendaContainer img.picLeft, td.contentContainer div.contactAgendaFlashContainer img.picLeft{
+margin-right:0;
+border:none;
+}
+td.contentContainer div.contactAgendaContainer div.contactContainer, td.contentContainer div.contactAgendaFlashContainer div.contactFlashContainer{
+float:left;
+}
+/* This style block is related to liquid fonts, and therefore it's currently commented out. 
+td.contentContainer div.contactAgendaContainer div.contactContainer div h5{
+font-size:small;
+}*/
+td.contentContainer div.contactAgendaContainer div.contactContainer div.descWrapper, td.contentContainer div.contactAgendaFlashContainer div.contactFlashContainer div.descWrapper{
+padding:15px 0px;
+}
+td.contentContainer div.initial, td.contentContainer div.full{
+padding: 0px 0px;
+}
+td.contentContainer div.full{
+display:none;
+}
+td.contentContainer div.initial span.text, td.contentContainer div.full span.text{
+float:left;
+margin-right:10px;
+}
+td.contentContainer div span.text p{
+padding-bottom:5px;
+}
+td.contentContainer div.full span.text{
+width:100%;
+line-height:15px;
+}
+td.contentContainer div.full span.linkContainer, td.contentContainer div.initial span.linkContainer{
+float:right;
+background:url(http://www.tdsecurities.com/tds/cms/cda/images/bullet_blue_down.gif) 0px 6px no-repeat;
+padding-left:10px;
+font-weight:bold;
+}
+td.contentContainer div.full span.linkContainer{
+background:url(http://www.tdsecurities.com/tds/cms/cda/images/bullet_blue_top.gif) 0px 6px no-repeat;
+}
+td.contentContainer div.worldMapContainer{
+width:100%;
+text-align:center;
+overflow:hidden;
+float:none;
+/* The following styles are for liquid fonts and therefore currently they are commented out.
+font-size:11px;
+font-size-adjust:none;
+*/
+}
+
+td.contentContainer div.worldMap{
+text-align:center;
+background:url(http://www.tdsecurities.com/tds/cms/cda/images/world_map.jpg) no-repeat center;
+height:263px;
+width:534px;
+float:none;
+position:relative;
+margin:0 auto;
+/* The following styles are for liquid fonts and therefore currently they are commented out.
+font-size:11px;
+font-size-adjust:none;
+*/
+}
+td.contentContainer div.worldMap img{
+position:absolute;
+overflow:hidden;
+/* The following styles are for liquid fonts and therefore currently they are commented out.
+font-size:11px;
+font-size-adjust:none;
+*/
+}
+/*Ashish: I am commenting this code to resolve artf545937 as siggested by Cagman.
+td.contentContainer div.worldMap #tokyo, td.contentContainer div.worldMap #seoul{
+display:none;
+}*/
+td.contentContainer div.worldMap #infoBox{
+border:1px solid #EA8C00;
+position:absolute;
+font-size:11px;
+line-height:15px;
+background-color:#fff;
+z-index:2;
+-moz-opacity:0.9;
+opacity:0.9;
+filter:alpha(opacity=80);
+color:#333;
+height:auto;
+text-align:center;
+padding:5px 10px;
+text-transform:Capitalize;
+display:none;
+/* The following styles are for liquid fonts and therefore currently they are commented out.
+font-size-adjust:none;
+*/
+}
+td.contentContainer div.countryWrapper{
+padding-left:9px;
+float:left;
+clear:both;
+width:100%;
+}
+td.contentContainer div.officePairWrapper{
+clear:both;
+}
+td.contentContainer div.officeWrapper{
+padding-bottom:12px;
+float:left;
+font-size:11px;
+/*font-size:85%; The following style is for liquid fonts and therefore currently it's commented out.*/
+line-height:15px;
+width:49%;
+}
+/* The following styles are for liquid fonts and therefore currently they are commented out.
+td.contentContainer div.officeWrapper h5{
+font-size:110%;
+}
+*/
+td.contentContainer div.officeWrapper sup{
+vertical-align:text-top;
+}
+
+td.contentContainer table.horzLimitShort{
+width:555px !important;
+height:1px;
+padding:0;
+margin:0;
+background-color:white;
+font-size:5px;
+float:left;
+}
+td.contentContainer table.horzLimitShort tr td{
+height:1px;font-size:5px;padding:0;line-height:5px;;border:none !important;background-color:white;
+}
+td.contentContainer div.linkContainer {
+float:left;
+width:
+}
+/******************************* Home page styles **********************************************/
+td.contentContainer div.bannerContainer1 {
+	position: relative;;
+	left: 0px;;
+	right: 0px;;
+	width: 99.77%;;
+	_width: 100%;;
+	_margin-right: 2px;;
+	height: 264px;;
+	margin-top: 29px;
+	_margin-top: 29px;
+	*margin-top: 29px;
+	border: 0px;
+	/*
+	border: 1px solid #C8DDCA;;
+	border-bottom: 2px solid #c8ddca;;*/
+	margin-bottom: 2px;
+}
+td.contentContainer div.bannerContainer1 div.left {
+	width: 100%;;
+	position: absolute;;
+	z-index: 2;;
+	left: 0px;;
+	top: 1px;;
+	height: 100%;
+}
+
+td.contentContainer div.bannerContainer1 div.translucentLayer {
+	width: 480px; /*height:100.3%;*/
+	height: 265px;;
+	position: absolute;;
+	bottom: -1px;;
+	_bottom: -2px;;
+	left: 0px;;
+	z-index: 4;;
+	-moz-opacity: 0.80;;
+	filter: alpha(opacity = 80);;
+	opacity: 0.8;
+}
+td.contentContainer div.bannerContainer1 div.textContainer {
+	width: 428px;;
+	height: 200px;;
+	padding: 42px 0px 0px 26px;;
+	color: #fff;;
+	font-weight: bold;;
+	position: absolute;;
+	top: 0px;;
+	left: 2px;;
+	z-index: 5;;
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 14px;
+}
+
+td.contentContainer div.bannerContainer1 div.textContainer p {
+	margin-bottom: 0;;
+	margin-bottom: 16px;;
+	line-height: 17px;
+}
+
+td.contentContainer div.bannerContainer1 div.textContainer p span.title
+	{
+	font-size: 23px; *
+	line-height: 23px;
+}
+
+td.contentContainer div.bannerContainer1 div.textContainer p a{
+color:#fff;
+}
+td.contentContainer div.bannerContainer1 div.textContainer p span.bullettedLink{
+background:url(http://www.tdsecurities.com/tds/cms/cda/images/arrow_white.gif) no-repeat left center;padding-left:10px;*background-position:left 4px;
+}
+td.contentContainer div.bannerContainer1 div.tickerTitle{
+position:absolute;bottom:-4px;_bottom:-5px;left:-1px;z-index:7;width:131px;height:21px;
+margin-left: 1px;
+width:159px;
+}
+td.contentContainer div.bannerContainer1 div.right{
+width:724px;position:absolute;z-index:3;right:0px;top:0px;_right:-1px;
+}
+td.contentContainer table.tickerTable {
+width: 100%;
+float: left;
+margin-bottom: 12px;
+_width:100.22%;
+border-bottom: 1px solid #666666
+}
+td.contentContainer table.tickerTable a {
+color: #333;
+font-weight: bold;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+td.contentContainer table.tickerTable tbody tr td {
+background:url(http://www.tdsecurities.com/tds/cms/cda/images/home_top_table_background.gif) repeat-x 0px 0px;
+vertical-align: middle;
+height:30px; /* Here I've gotten rid of the padding style and added the height style for display purposes. */
+border-right: 1px solid #CCCCCC;
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+}
+/* The following styles are for liquid fonts and therefore currently they are commented out.
+td.contentContainer table.tickerTable tbody tr td span{
+font-size:90%;
+}
+*/
+td.contentContainer table.tickerTable tbody tr td.last {
+border: none;
+}
+td.contentContainer table.tickerTable tbody tr td div {
+text-align: center;
+font-family:Arial, Helvetica, sans-serif;
+font-size: 10px;
+/*font-size: 83%; This style is for liquid font sizes and therefore currently it's commented out. */
+width:100%;
+}
+td.contentContainer table.tickerTable tbody tr td div span.itemName{
+font-weight: bold;
+color: #333;
+}
+td.contentContainer table.tickerTable tbody tr td div span.itemValue{
+
+padding-right: 0px;
+color: #666;
+font-weight: normal;
+padding: 0px 2px;
+padding-left: 7px;
+}
+td.contentContainer table.tickerTable tbody tr td div span.itemDiff{
+padding: 0px 2px;
+padding-right: 0px;
+}
+td.contentContainer table.tickerTable tbody tr td span.green {
+color: #3BA45F;
+}
+td.contentContainer table.tickerTable tbody tr td span.red {
+color: #FF0000;
+}
+td.contentContainer table.horzLimit {
+width:730px;
+height:1px; /*Here I've set the height of this table so that we don't have a lot of unnecessary white space. */
+float:left;
+}
+td.noLeftNav, div.noLeftNav {
+width:100% !important;
+padding-right: 16px;
+padding-left: 16px;
+_padding-left: 14px;
+text-align: left;
+vertical-align: top;
+}
+.noLeftNav h1 {
+margin-bottom: 8px;
+}
+td.contentContainer div.homeContainer {
+margin-top: 8px;
+}
+td.contentContainer div.cols5TextOnly, td.contentContainer div.cols5TextOnly div.colContainer, td.contentContainer div.cols5TextOnly div.vertDivider {
+float: left;
+}
+td.contentContainer div.cols5TextOnly {
+padding-top: 5px;
+clear: both;
+width:100% !important;
+}
+td.contentContainer div.cols5TextOnly a.black{
+color: #333;
+}
+td.contentContainer div.cols2HasImage div.colContainer a.black{
+color: #333;
+}
+td.contentContainer div.cols5TextOnly div.colContainer {
+width: 18.2%; /* I've changed this value to 18.2% from 18.9%, because that's what I have on the latest stylesheet. */
+float: left;
+}
+td.contentContainer div.cols5TextOnly div.colContainer h6{
+height: 40px; /*Incresed to fix artf803968 */
+padding-top: 2px;
+padding-right:10px; /* Here I've removed the width attribute and addded right padding to the element. */
+}
+td.contentContainer div.cols5TextOnly div.colContainer ul{
+margin-left:0px;
+margin-right:0px;
+}
+td.contentContainer div.cols5TextOnly div.colContainer ul li{
+background: url(http://www.tdsecurities.com/tds/cms/cda/images/arrow_green.gif) no-repeat 1px 6px;
+padding: 2px 8px;
+width:90%; /* I'm adding this style to make sure that the columns don't spill out to the next line when the resolution is small. */
+}
+td.contentContainer div.cols5TextOnly div.colContainer ul li a{
+color: #2D5C3D;
+}
+td.contentContainer div.disclaimer, td.contentContainer div.disclaimerDark{
+float: none;
+color: #999;
+font-size: 9px;
+/*font-size: 70%; This style is related to liquid fonts and therefore currently it's commented out.*/
+padding: 20px 0px;
+padding-bottom: 28px;
+clear:both;
+width: 100%;
+}
+td.contentContainer div.disclaimerDark{
+padding:0;
+color: #666;
+}
+td.contentContainer div.disclaimerDark p{
+font-size:100%;
+margin-bottom:5px;
+line-height:12px;
+}
+td.contentContainer div.disclaimer sup, td.contentContainer div.disclaimerDark sup{
+vertical-align:text-top;
+/*font-size:84%;
+*font-size:100%;*/
+padding-left:1px;
+}
+td.contentContainer div.cols5TextOnly div.vertDivider {
+width: 1px;
+border-left: 1px dashed #C8DDCA;
+margin-right: 8px;
+_margin-right: 5px;
+height: 160px; /*This value gets overridden by a Javascript */
+float: left;
+}
+pre {
+color: #AECAB4;
+font-weight: bold;
+font-size: 16px;
+/* We'll need to come up with the correct percentage value for this font-size once we deploy the liquid fonts */
+padding-bottom: 4px;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+div.cols2TextOnlyTop{
+margin-top: 0px;
+clear: both;
+float: left;
+width: 100%;
+}
+td.contentContainer div.contentSection ul.bullettedList li.liTextNoDisplay {
+background: none;
+padding-left: 7px;
+color: #333;
+margin-top: -8px;
+list-style-type: none;
+display: none;
+}
+/* Inside the contentContainer section of this doc, we need to add the following: */
+td.contentContainer div.textRight{
+width:100%;
+text-align:right;
+font-size:11px;
+/*font-size:84%;*/
+font-weight:bold;
+padding-top:20px;
+}
+
+td.contentContainer div.greenBackgroundBox select.day {
+margin-left: 5px;
+}
+/*
+===================================================================================
+Buttons
+===================================================================================
+*/
+.button_1, .button_2, .button_3, .button_4, .button_5, .button_6{
+	_padding: 0px 10px 0px 0px;
+	_margin: 0px 0px 2px 0px;
+	
+	padding: 2px, 3px, 7px, 0px;
+	margin: 3px, 5px, 7px, 0px;
+	
+	_display:inline-block;
+	background-repeat: no-repeat;
+	background-position: right center;
+	white-space:nowrap;
+
+}
+ /*firefox & IE 7 workaround */    
+html > body .button_1, html > body .button_2, html > body  .button_3, html > body  .button_4{	
+	
+
+	padding-top: 2px;
+	padding-bottom: 7px;
+	padding-right: 3px;
+	margin-top: 3px;
+	margin-right: 5px;
+	margin-bottom: 7px;
+	
+	*padding-top: 0px;
+	*padding-right: 10px;
+	*padding-bottom: 0px;
+	
+	*margin-top: 0px;
+	*margin-right: 0px;
+	*margin-bottom: 2px;
+}
+
+html > body  .button_5, html > body  .button_6{
+	padding-top: 2px;
+	padding-bottom: 7px;
+	padding-right: 6px;
+	margin-top: 3px;
+	margin-right: 5px;
+	margin-bottom: 7px;
+	
+	*padding-top: 0px;
+	*padding-right: 10px;
+	*padding-bottom: 0px;
+	
+	*margin-top: 0px;
+	*margin-right: 0px;
+	*margin-bottom: 2px;
+} 
+
+.button_1 a, .button_2 a, .button_3 a, .button_4 a, .button_5 a, .button_6 a{
+	padding: 3px 6px 7px 12px;
+	_display:inline-block;
+	background-repeat: no-repeat;
+	background-position: left center;
+	white-space:nowrap;
+	font-weight:bold;
+	font-size: 11px;	
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+div.buttonHolder .button_1 a:hover, div.buttonHolder .button_2 a:hover, div.buttonHolder .button_3 a:hover, div.buttonHolder .button_4 a:hover, div.buttonHolder .button_5 a:hover, div.buttonHolder .button_6 a:hover{	
+text-decoration: none;
+}
+
+div.buttonHolder .button_1 a:link, div.buttonHolder .button_2 a:link, div.buttonHolder .button_3 a:link, div.buttonHolder .button_4 a:link, div.buttonHolder .button_5 a:link, div.buttonHolder .button_6 a:link{
+color: #ffffff;
+}
+
+div.buttonHolder .button_1 a:active, div.buttonHolder .button_2 a:active, div.buttonHolder .button_3 a:active, div.buttonHolder .button_4 a:active, div.buttonHolder .button_5 a:active, div.buttonHolder .button_6 a:active{	
+color: #ffffff;
+}
+
+.button_1, .button_1 a {
+	background-image: url(http://www.tdsecurities.com/tds/cms/cda/images/btn_orange_background_1.gif);
+	color: #ffffff;
+}
+.button_2, .button_2 a {
+	background-image: url(http://www.tdsecurities.com/tds/cms/cda/images/btn_green_background_3.gif);	
+	color: #274d32;
+}
+.button_3, .button_3 a {
+	background-image: url(http://www.tdsecurities.com/tds/cms/cda/images/btn_orange_background_2.gif);	
+	color: #ffffff;
+}
+.button_4, .button_4 a {
+	background-image: url(http://www.tdsecurities.com/tds/cms/cda/images/btn_green_background_2.gif);	
+	color: #618D6E;
+}
+.button_5, .button_5 a {
+	background-image: url(http://www.tdsecurities.com/tds/cms/cda/images/btn_orange_background_3.gif);	
+	color: #ffffff;
+}
+.button_6, .button_6 a {
+	background-image: url(http://www.tdsecurities.com/tds/cms/cda/images/btn_orange_background_4.gif);	
+	color: #ffffff;
+}
+div.txnGoButton {
+	padding-top: 0px;
+	*padding-top: 0px;
+}
+td.headerSearchButton {
+	_padding-bottom: 0px;
+	padding-bottom: 5px;
+	
+}
+
+
+
+/* New button style */
+.btn_orange_left {
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/btn_orange_left.gif) left top no-repeat; 
+	width: 11px; 
+	height: 17px; 
+	float: left; 
+	margin: 0; 
+	padding: 0;
+	cursor: hand; 
+	cursor: pointer;
+
+}
+.btn_orange_right {
+	float: left;
+	cursor: hand;
+}	
+.btn_orange_right span, .btn_orange_right a{
+	margin: 0; 
+	float: left; 
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/btn_orange_right.gif) right no-repeat; 
+	padding: 1px 11px 2px 0; 
+	height: 14px; 
+	color: #fff; 
+	font-weight: bold; 
+	font-size: 9px;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+.btn_brown_left {
+    background: url("http://www.tdsecurities.com/tds/cms/cda/images/btn_brown_left.gif") no-repeat scroll left top transparent;
+    cursor: pointer;
+    float: left;
+    height: 17px;
+    margin: 0;
+    padding: 0;
+    width: 11px;
+}
+.btn_brown_right {
+    float: left;
+}
+.btn_brown_right span, .btn_brown_right a {
+    background: url("http://www.tdsecurities.com/tds/cms/cda/images/btn_brown_right.gif") no-repeat scroll right top transparent;
+    color: #FFFFFF;
+    float: left;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+    height: 14px;
+    margin: 0;
+    padding: 2px 12px 2px 0;
+    cursor: pointer;
+}
+
+/* New button style */
+.button_4_left {
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/btn_green_bg_2_left.gif) left top no-repeat; 
+	width: 11px; 
+	height: 18px; 
+	float: left; 
+	margin-top: 1px; 
+	padding-bottom: 2px;
+	cursor: hand; 
+	cursor: pointer;
+
+}
+.button_4_right  {
+	float: left;
+	cursor: hand;
+}	
+.button_4_right a, .button_4_right span {
+	margin: 0; 
+	float: left; 
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/btn_green_bg_2_right.gif) right no-repeat; 
+	padding: 2px 11px 2px 0; 
+	height: 18px; 
+	color: #385d43; 
+	font-weight: bold; 
+	font-size: 9px;
+	
+	margin-top: 0px;
+	[margin-top: 0px;
+	margin-top: 1px;
+	]*margin-top: 0px;
+		font-family: Verdana,Arial,Helvetica,sans-serif;
+	}
+	
+		
+/* New button style */
+.button_3_left {
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/btn_orange_bg_2_left.gif) left top no-repeat; 
+	width: 11px; 
+	height: 18px; 
+	float: left; 
+	margin-top: 1px; 
+	padding-bottom: 2px;
+	cursor: hand; 
+	cursor: pointer;
+
+}
+.button_3_right  {
+	float: left;
+	cursor: hand;
+}	
+.button_3_right a, .button_3_right span {
+	margin: 0; 
+	float: left; 
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/btn_orange_bg_2_right.gif) right no-repeat; 
+	padding: 2px 11px 2px 0; 
+	height: 18px; 
+	color: #fff; 
+	font-weight: bold; 
+	font-size: 9px;
+	
+	margin-top: 0px;
+	[margin-top: 0px;
+	margin-top: 1px;
+	]*margin-top: 0px;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	}
+	
+	
+/* New button style */
+.button_5_left {
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/btn_orange_bg_2_left.gif) left top no-repeat; 
+	width: 11px; 
+	height: 18px; 
+	float: left; 
+	margin-top: 1px ; 
+	padding-bottom: 2px;
+	cursor: hand; 
+	cursor: pointer;
+
+}
+.button_5_right  {
+	float: left;
+	cursor: hand;
+}	
+.button_5_right a, .button_5_right span {
+ 
+	float: left; 
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/btn_orange_bg_2_right.gif) right no-repeat; 
+	padding: 3px 11px 2px 0; 
+	height: 18px; 
+	color: #fff; 
+	font-weight: bold; 
+	font-size: 9px;
+	text-decoration: none;
+	
+	margin-top: 0px;
+	[margin-top: 0px;
+	margin-top: 1px;
+	]*margin-top: 0px;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	}
+	
+	div.button_5_right a:hover {
+	text-decoration: none;
+	}
+	
+	/* New button style */
+.goButton_left { 
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/btn_green_bg_3_left.gif) left top no-repeat; 
+	width: 11px; 
+	height: 19px; 
+	
+	
+	
+	margin-top: 1px;
+	[margin-top: 1px;
+	margin-top: 2px; 
+	]*margin-top: 1px;
+	
+	float: left; 
+	padding-bottom: 2px;
+	
+	cursor: hand; 
+	cursor: pointer;
+
+}
+.goButton_right  {
+	float: left;
+	cursor: hand;
+}	
+.goButton_right span {
+	float: left; 
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/btn_green_bg_3_right.gif) right no-repeat; 
+	
+	padding: 4px 11px 2px 0;
+	[padding: 4px 11px 2px 0;
+	padding: 6px 11px 2px 0;
+	]*padding: 4px 11px 2px 0;
+
+	height: 19px; 
+	[height: 19px; 
+	height: 18px; 
+	]*height: 18px; 
+	
+	color: #385d43;
+	font-weight: bold; 
+	font-size: 9px;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	}
+	
+	
+td.rightNavContainer div.loginBoxContainer div.newButtonHolder {
+float: right;
+padding-top: 2px;
+	padding-right: 8px;
+	[padding-right: 8px;
+	padding-right: 6px;
+	]*padding-right: 8px;
+}
+
+td.rightNavContainer div.loginBoxContainer div.newButtonHolder a:hover{
+text-decoration: none;
+}
+
+div.newButtonHolder .button_1 a:hover, div.newButtonHolder .button_2 a:hover, div.newButtonHolder .button_3 a:hover, div.newButtonHolder .button_4 a:hover, div.newButtonHolder .button_5 a:hover, div.newButtonHolder .button_6 a:hover{	
+text-decoration: none;
+}
+div.newButtonHolder .button_1 a:link, div.newButtonHolder .button_2 a:link, div.newButtonHolder .button_3 a:link, div.newButtonHolder .button_4 a:link, div.newButtonHolder .button_5 a:link, div.newButtonHolder .button_6 a:link{
+color: #ffffff;
+}
+
+div.newButtonHolder .button_1 a:active, div.newButtonHolder .button_2 a:active, div.newButtonHolder .button_3 a:active, div.newButtonHolder .button_4 a:active, div.newButtonHolder .button_5 a:active, div.newButtonHolder .button_6 a:active{	
+color: #ffffff;
+}
+
+
+.button_6_left {
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/btn_orange_bg_4_left.gif) left top no-repeat; 
+	width: 11px; 
+	height: 21px;
+	[height: 21px;
+	height: 18px;
+	]*height: 21px;
+	float: left; 
+	padding-bottom: 2px;
+	[padding-bottom: 2px;
+	padding-bottom: 5px;
+	]*padding-bottom: 1px;
+	cursor: hand; 
+	cursor: pointer;
+}
+.button_6_right  {
+	float: left;
+	cursor: hand; 
+}	
+.button_6_right a, .button_6_right span{
+	margin: 0; 
+	float: left; 
+	background:url(http://www.tdsecurities.com/tds/cms/cda/images/btn_orange_bg_4_right.gif) right no-repeat; 
+	
+	padding: 2px 11px 2px 0; 
+	[padding: 2px 11px 2px 0; 
+	padding: 4px 11px 2px 0;
+	]*padding: 2px 11px 2px 0; 
+	
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	height: 18px; 
+	*height: 19px;
+	color: #fff; 
+	font-weight: bold; 
+	font-size: 9px;
+	}
+td.contentContainer div.linkContainerRight{
+	padding-bottom: 16px;
+	*padding-bottom: 8px;
+}
+td.contentContainer div.greenBackgroundBox div.noUnderline a:hover{
+	text-decoration: none;
+}
+
+div.linkingElemPreview {
+_padding-bottom: 10px;
+
+
+}
+
+div.nonlinkingElemPreview {
+float: left;
+
+}
+
+.actionError {
+	width:240px;
+	text-align:center;
+	line-height:18px;
+	background-color: #FFCCCC;
+	border-top: solid 1px #FF0000;
+	border-bottom: solid 1px #FF0000;
+	margin: 10px;
+	padding: 3px 40px;
+	color: #000000;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*Add Style for td-skip: fix for Web Content Accessibility Issue - Skip repeated content */
+.td-skip {
+    position:absolute;
+	left:-1000px;
+	top:-1000px;
+	text-align: left; 
+	overflow:hidden;
+}

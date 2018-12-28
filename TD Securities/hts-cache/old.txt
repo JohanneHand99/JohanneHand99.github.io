@@ -1,0 +1,4 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+13:32:49	0/0	---M--	302	error ('Moved%20Temporarily')	text/html	date:Fri,%2028%20Dec%202018%2018:32:49%20GMT	https://wb.authentication.td.com/uap-ui/index.html?consumer=webbroker&locale=en_CA	C:/Customers/TD/TD%20Securities/TD%20Securities/wb.authentication.td.com/uap-ui/index.0a507.delayed	(from )
+13:32:50	83257/83257	---M-Z	200	added ('OK')	text/html	date:Fri,%2028%20Dec%202018%2018:32:50%20GMT	https://www.td.com/ca/products-services/investing/browser-index.jsp	C:/Customers/TD/TD%20Securities/TD%20Securities/www.td.com/ca/products-services/investing/browser-index.html	(from )
+13:32:55	272/272	---M--	200	added ('OK')	text/plain	date:Thu,%2010%20Mar%202016%2006:07:30%20GMT	https://www.td.com/robots.txt		(from )
