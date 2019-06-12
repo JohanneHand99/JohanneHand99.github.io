@@ -1,0 +1,3 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+09:52:33	142674/142674	---MCZ	200	added ('OK')	text/html	date:Wed,%2012%20Jun%202019%2013:52:32%20GMT	https://ia.ca/assurance-voyage	C:/Customers/iA/ia%20Travel%20v2/ia.ca/assurance-voyage.html	(from )
+09:52:33	3779/3779	---M--	200	added ('OK')	text/plain	date:Wed,%2012%20Jun%202019%2013:52:32%20GMT	https://ia.ca/robots.txt		(from )
