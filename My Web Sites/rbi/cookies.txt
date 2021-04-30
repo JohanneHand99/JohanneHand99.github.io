@@ -1,0 +1,7 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+careers.rbi.com	TRUE	/	FALSE	1999999999	PLAY_SESSION	eyJhbGciOiJIUzI1NiJ9.eyJkYXRhIjp7IkpTRVNTSU9OSUQiOiIwZTZiMDVhOS1kNGUxLTRhMmQtYjdkMi1jOTA2MTY3NzQyNmYifSwibmJmIjoxNjE5ODE1Mjk4LCJpYXQiOjE2MTk4MTUyOTh9.2JhmgYQQJin5H7vIAc8i-_jKqrTzK6vpjFIvG1hGIx4
+careers.rbi.com	TRUE	/	FALSE	1999999999	JSESSIONID	0e6b05a9-d4e1-4a2d-b7d2-c9061677426f
+careers.rbi.com	TRUE	/	FALSE	1999999999	VISITED_LANG	en
+careers.rbi.com	TRUE	/	FALSE	1999999999	VISITED_COUNTRY	global
+
